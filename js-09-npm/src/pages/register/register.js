@@ -1,13 +1,16 @@
+import "./register.css";
 import "/src/css/styles.scss";
-import "./register.css"
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap';
+bootstrap
 
-import { insertMainHeader } from "/src/modules/header/header";
-import { insertMainFooter } from "/src/modules/footer/footer";
 import { handlerRegister } from "./handlerRegister";
+import { insertMainFooter } from "/src/modules/footer/footer";
+import { insertMainHeader } from "/src/modules/header/header";
 
-window.addEventListener( "load", () => {
-    
-    document.getElementById("app").innerHTML = `
+window.addEventListener("load", () => {
+
+  document.getElementById("app").innerHTML = `
     ${insertMainHeader()} 
     <main id="app" class="container my-4">
         <div class="row justify-content-center">
@@ -86,6 +89,6 @@ window.addEventListener( "load", () => {
     ${insertMainFooter()}
 `
 
-    handlerRegister( document.getElementById("contactForm") );
+  handlerRegister(document.getElementById("contactForm"));
 });
 

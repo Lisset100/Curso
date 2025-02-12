@@ -1,8 +1,12 @@
-import "/src/css/styles.scss"
+import "/src/css/styles.scss";
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap';
+bootstrap
 
-import { insertMainHeader } from "/src/modules/header/header";
-import { insertMainFooter } from "/src/modules/footer/footer";
 import { welcome } from "../pages/welcome/welcome";
+import { insertMainFooter } from "/src/modules/footer/footer";
+import { insertMainHeader } from "/src/modules/header/header";
+
 
 /**
  * El método onload de window en JavaScript se utiliza para ejecutar 
@@ -14,11 +18,10 @@ import { welcome } from "../pages/welcome/welcome";
  */
 document.getElementById("app").innerHTML = `
 
-    ${ insertMainHeader() } 
+    ${insertMainHeader()} 
     <main class="container text-center my-4">
-        ${ welcome() }
+        ${welcome()}
     </main>
-    ${ insertMainFooter() }
+    ${insertMainFooter()}
  `
 
- 

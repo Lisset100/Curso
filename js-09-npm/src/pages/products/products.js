@@ -1,11 +1,14 @@
+import "./products.css";
 import "/src/css/styles.scss";
-import "./products.css"
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap';
+bootstrap
 
-import { insertMainHeader } from "/src/modules/header/header";
-import { insertMainFooter } from "/src/modules/footer/footer";
 import { getProducts } from "../../modules/api/getProducts/getProducts.js";
+import { insertMainFooter } from "/src/modules/footer/footer";
+import { insertMainHeader } from "/src/modules/header/header";
 
-window.addEventListener( "load", async() => document.getElementById("app").innerHTML = `
+window.addEventListener("load", async () => document.getElementById("app").innerHTML = `
     ${insertMainHeader()} 
     <main class="container text-center my-4">
       <div class="row">
@@ -15,7 +18,7 @@ window.addEventListener( "load", async() => document.getElementById("app").inner
     ${insertMainFooter()}
 `
 );
- 
+
 /*
  * En la semana 12, al tener lista nuestra API en SpringBoot
  * Se usaría la URL que se genere en el despliegue de nuestra API
