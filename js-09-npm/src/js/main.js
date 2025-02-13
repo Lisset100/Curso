@@ -1,11 +1,10 @@
 import "/src/css/styles.scss";
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap';
-bootstrap
-
 import { welcome } from "../pages/welcome/welcome";
 import { insertMainFooter } from "/src/modules/footer/footer";
 import { insertMainHeader } from "/src/modules/header/header";
+bootstrap
 
 
 /**
